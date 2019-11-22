@@ -1,4 +1,4 @@
-![To Do List](https://i.giphy.com/xTiTnuhyBF54B852nK.gif)
+![ToDo](https://i.giphy.com/xTiTnuhyBF54B852nK.gif)
 
 # To Do List
 Let's make a full CRUD app!
