@@ -3,6 +3,7 @@ const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
 const pgp = require('pg-promise')();
 const logger = require('morgan');
+const cors = require('cors');
 const server = express();
 const PORT = process.env.PORT || 9000;
 
@@ -15,6 +16,7 @@ server.use(express.static(__dirname + '/public'));
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 server.use(logger('dev'));
+server.use(cors());
 
 server.get('/', (req, res) => {
   res.render('index');
