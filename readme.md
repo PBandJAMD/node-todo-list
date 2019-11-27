@@ -1,4 +1,4 @@
-![ToDo](https://media.giphy.com/media/YLHwkqayc1j7a/giphy.gif)
+<!-- ![ToDo](https://media.giphy.com/media/YLHwkqayc1j7a/giphy.gif)
 
 # To Do List
 Let's make a full CRUD app!
@@ -35,7 +35,7 @@ Directions are going to be a little more sparse as you should be able to start r
     - pg-promise
 * Add a `.gitignore` file and add the following text to it:
     - `node_modules/`
-    
+
 * Prepare as much of the app structure as you can remember. Before you actually start coding, perform an initial `git commit`.
 
 #### Part 2 - Set Up the Database
@@ -98,8 +98,4 @@ Implement UPDATE functionality. You'll need to add an Edit **view** and update t
 
 Implement DELETE functionality. Think about what files need to be updated to make this work.
 
-#### Part 8 - BONUS - Style this bad boy so it looks nice!
- 
-
-
-
+#### Part 8 - BONUS - Style this bad boy so it looks nice! -->
