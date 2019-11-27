@@ -81,10 +81,10 @@
       }
     };
 
-    getTodos();
-    getTodo();
-    createTodo();
-    updataTodo();
-    deleteTodo(12);
+    // getTodos();
+    // getTodo();
+    // createTodo();
+    // updataTodo();
+    // deleteTodo();
   };
 })();
