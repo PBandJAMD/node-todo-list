@@ -1,4 +1,4 @@
-<!-- ![ToDo](https://media.giphy.com/media/YLHwkqayc1j7a/giphy.gif)
+![ToDo](https://media.giphy.com/media/YLHwkqayc1j7a/giphy.gif)
 
 # To Do List
 Let's make a full CRUD app!
@@ -98,4 +98,4 @@ Implement UPDATE functionality. You'll need to add an Edit **view** and update t
 
 Implement DELETE functionality. Think about what files need to be updated to make this work.
 
-#### Part 8 - BONUS - Style this bad boy so it looks nice! -->
+#### Part 8 - BONUS - Style this bad boy so it looks nice!
