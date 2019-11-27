@@ -81,7 +81,7 @@
       }
     };
 
-    // getTodos();
+    getTodos();
     // getTodo();
     // createTodo();
     // updataTodo();
