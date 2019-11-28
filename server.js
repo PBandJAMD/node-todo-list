@@ -26,7 +26,7 @@ server.get('/todos/all', (req, res) => {
   res.render('all');
 });
 
-server.get('/todos/show', (req, res) => {
+server.get('/todos/show/:id', (req, res) => {
   res.render('show');
 });
 

@@ -19,7 +19,7 @@
           content.innerHTML = json.data[i].content;
           link.textContent = 'Show details';
           // @ts-ignore
-          link.href = 'http://localhost:9000/todos/show/';
+          link.href = `http://localhost:9000/todos/show/${json.data[i].id}`;
           mainUl.append(subject);
           mainUl.append(content);
           mainDiv.append(mainUl);
@@ -56,11 +56,33 @@
 
     const createTodo = async () => {
       try {
+        const mainDiv = document.getElementById('create-todo');
+        const mainForm = document.createElement('form');
+        const mainLabel = document.createElement('label');
+        const mainInput = document.createElement('input');
+        const mainLabel2 = document.createElement('label');
+        const mainInput2 = document.createElement('input');
+        const btn = document.createElement('button');
+        const bk = document.createElement('br');
+        mainLabel.innerHTML = 'Subject';
+        mainInput.type = 'text';
+        mainLabel2.innerHTML = 'Content';
+        mainInput2.type = 'text';
+        btn.textContent = 'add todo';
+        mainForm.append(mainLabel);
+        mainForm.append(mainInput);
+        mainForm.append(bk);
+        mainForm.append(mainLabel2);
+        mainForm.append(mainInput2);
+        mainForm.append(btn);
+        mainDiv.append(mainForm);
+
         const res = await fetch('http://localhost:9000/api/todos', {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({})
         });
+
         const json = await res.json();
         console.log(json);
       } catch (err) {
@@ -98,7 +120,7 @@
 
     getTodos();
     getTodo(6);
-    // createTodo();
+    createTodo();
     // updataTodo();
     // deleteTodo();
   };
