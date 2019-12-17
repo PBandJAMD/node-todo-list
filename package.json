@@ -1,5 +1,8 @@
 {
   "name": "node-todo-list",
+  "engines": {
+    "node": "13.3.0"
+  },
   "version": "1.0.0",
   "description": "Todo list app ",
   "main": "server.js",
