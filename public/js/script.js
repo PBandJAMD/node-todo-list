@@ -90,7 +90,7 @@
       }
     };
 
-    const updataTodo = async id => {
+    const updateTodo = async id => {
       try {
         const res = await fetch(`http://localhost:9000/api/todos${id}`, {
           method: 'update',
@@ -121,7 +121,7 @@
     getTodos();
     getTodo(6);
     createTodo();
-    // updataTodo();
+    // updateTodo();
     // deleteTodo();
   };
 })();
