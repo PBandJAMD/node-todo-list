@@ -4,7 +4,10 @@
 
     const getTodos = async () => {
       try {
-        const res = await fetch('http://localhost:9000/api/todos');
+        // const res = await fetch('http://localhost:9000/api/todos');
+        const res = await fetch(
+          'https://safe-springs-28273.herokuapp.com/api/todos'
+        );
         const json = await res.json();
         console.log(json.data);
 
@@ -19,7 +22,8 @@
           content.innerHTML = json.data[i].content;
           link.textContent = 'Show details';
           // @ts-ignore
-          link.href = `http://localhost:9000/todos/show/${json.data[i].id}`;
+          // link.href = `http://localhost:9000/todos/show/${json.data[i].id}`;
+          link.href = `https://safe-springs-28273.herokuapp.com/todos/show/${json.data[i].id}`;
           mainUl.append(subject);
           mainUl.append(content);
           mainDiv.append(mainUl);
@@ -33,7 +37,10 @@
 
     const getTodo = async id => {
       try {
-        const res = await fetch(`http://localhost:9000/api/todos/${id}`);
+        // const res = await fetch(`http://localhost:9000/api/todos/${id}`);
+        const res = await fetch(
+          `https://safe-springs-28273.herokuapp.com/api/todos/${id}`
+        );
         const json = await res.json();
         for (let i = 0; i < json.data.length; i++) {
           const mainDiv = document.getElementById('show-todo');
@@ -77,12 +84,19 @@
         mainForm.append(btn);
         mainDiv.append(mainForm);
 
-        const res = await fetch('http://localhost:9000/api/todos', {
-          method: 'post',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        });
-
+        // const res = await fetch('http://localhost:9000/api/todos', {
+        //   method: 'post',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({})
+        // });
+        const res = await fetch(
+          'https://safe-springs-28273.herokuapp.com/api/todos',
+          {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({})
+          }
+        );
         const json = await res.json();
         console.log(json);
       } catch (err) {
@@ -92,11 +106,20 @@
 
     const updateTodo = async id => {
       try {
-        const res = await fetch(`http://localhost:9000/api/todos${id}`, {
-          method: 'update',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        });
+        // const res = await fetch(`http://localhost:9000/api/todos${id}`, {
+        //   method: 'update',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({})
+        // });
+
+        const res = await fetch(
+          `https://safe-springs-28273.herokuapp.com/api/todos${id}`,
+          {
+            method: 'update',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({})
+          }
+        );
         const json = await res.json();
         console.log(json);
       } catch (err) {
@@ -106,11 +129,19 @@
 
     const deleteTodo = async id => {
       try {
-        const res = await fetch(`http://localhost:9000/api/todos${id}`, {
-          method: 'delete',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        });
+        // const res = await fetch(`http://localhost:9000/api/todos${id}`, {
+        //   method: 'delete',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({})
+        // });
+        const res = await fetch(
+          `https://safe-springs-28273.herokuapp.com/api/todos${id}`,
+          {
+            method: 'delete',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({})
+          }
+        );
         const json = await res.json();
         console.log(json);
       } catch (err) {
