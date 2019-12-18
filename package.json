@@ -10,6 +10,8 @@
   "author": "mohamed gassama <bouyagassama@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "heroku-prebuild": "bash ./scripts/deployment_react.sh",
+    "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh",
     "start": "nodemon server.js"
   },
   "dependencies": {
